@@ -43,14 +43,20 @@ function text_green(){
 text_green();
 
 //------------------Fonctionnalité 5-----------------------------------------------------------
-function nucleaire(){
+
     var navbar = document.querySelector('header')
+    var suprr = document.querySelector("head link")
+    var hrefBootstrapElement = suprr.getAttribute("href")
+
     navbar.addEventListener("dblclick", () => {
-        console.log('salut navbar')
-        document.querySelector("header").removeAttribute("href")
+        if (suprr.getAttribute('href')){
+           suprr.removeAttribute("href");
+        } else if (suprr.getAttribute('href')=== null){
+            suprr.setAttribute("href", hrefBootstrapElement);
+        }
+         
     });
-}
-nucleaire();
+
         
    
        
